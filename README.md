@@ -8,7 +8,11 @@ The project currently requires an external **AppSettings.config** file.  The con
 
 ```xml
     <?xml version="1.0" encoding="utf-8"?>
-    <appSettings>
+    <appSettings>        
+        <add key="webpages:Version" value="3.0.0.0" />
+        <add key="webpages:Enabled" value="false" />
+        <add key="ClientValidationEnabled" value="true" />
+        <add key="UnobtrusiveJavaScriptEnabled" value="true" />
         <add key="ProjectId" value="YOUR_PROJECT_ID" />
     </appSettings>
 ```
