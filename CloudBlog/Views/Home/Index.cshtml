@@ -1,0 +1,15 @@
+﻿@model CloudBlog.Models.HomeViewModel
+
+@{
+    ViewBag.Title = Model.ContentItem.MetadataMetaTitle;
+}
+@section headers
+{
+    @Html.Partial("HeadersMetadata", Model.ContentItem)
+}
+
+<div class="row">
+    <h1 class="title-tab">
+        @Html.DisplayFor(vm => vm.ContentItem.MetadataMetaTitle)
+    </h1>
+</div>
