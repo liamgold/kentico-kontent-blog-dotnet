@@ -11,6 +11,8 @@ namespace CloudBlog.Models
             {
                 case "article":
                     return typeof(Article);
+                case "blog_post":
+                    return typeof(BlogPost);
                 case "home":
                     return typeof(Home);
                 default:

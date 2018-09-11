@@ -220,14 +220,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ContentLinkUrlResolver\CustomContentLinkUrlResolver.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContentTypesWithMetadata\Article.cs" />
+    <Compile Include="Models\ContentTypesWithMetadata\BlogPost.cs" />
     <Compile Include="Models\ContentTypesWithMetadata\Home.cs" />
     <Compile Include="Models\ContentTypesWithMetadata\IMetadata.cs" />
     <Compile Include="Models\ContentTypes\Article.generated.cs" />
+    <Compile Include="Models\ContentTypes\BlogPost.generated.cs" />
     <Compile Include="Models\ContentTypes\CustomTypeProvider.cs" />
     <Compile Include="Models\ContentTypes\Home.generated.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
@@ -252,7 +255,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -263,6 +266,10 @@
     </Content>
     <None Include="packages.config" />
     <Content Include="Views\Shared\HeadersMetadata.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Blog\Post.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\BlogPost.cshtml" />
+    <Content Include="Views\Blog\Tag.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

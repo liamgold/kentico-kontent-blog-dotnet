@@ -1,4 +1,5 @@
-﻿using KenticoCloud.Delivery;
+﻿using CloudBlog.Models;
+using KenticoCloud.Delivery;
 using System.Globalization;
 
 namespace CloudBlog
@@ -11,9 +12,11 @@ namespace CloudBlog
         {
             switch (link.ContentTypeCodename)
             {
-                case "article":
+                case Article.Codename:
                     return $"/{CurrentCulture}/articles/{link.UrlSlug}";
-                case "home":
+                case BlogPost.Codename:
+                    return $"/{CurrentCulture}/blog/{link.UrlSlug}";
+                case Home.Codename:
                     return $"/{CurrentCulture}/";
                 default:
                     return $"/not_found";
