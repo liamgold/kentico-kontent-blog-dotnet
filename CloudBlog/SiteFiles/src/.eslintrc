@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb"
+  ],
+  "globals": {
+    "angular": false,
+    "jQuery": false,
+    "Modernizr": false,
+    "ScrollMagic": false,
+    "DEBUG": false,
+    "Toolkit": false,
+    "TimelineMax": false,
+    "TweenMax": false,
+    "TweenLite": false,
+    "videojs": false
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "class-methods-use-this": "off",
+    "function-paren-newline": "off",
+    "global-require": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "linebreak-style": "off",
+    "max-len": ["warn", 100],
+    "no-debugger": "warn",
+    "no-restricted-syntax": "warn",
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true
+      }
+    ],
+    "strict": 0
+  }
+}

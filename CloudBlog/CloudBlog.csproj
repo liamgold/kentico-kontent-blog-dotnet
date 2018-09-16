@@ -225,6 +225,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Extensions\DateTimeFormatterParameters.cs" />
+    <Compile Include="Helpers\Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Helpers\Extensions\MediaCondition.cs" />
+    <Compile Include="Helpers\Extensions\ResponsiveImageSizes.cs" />
+    <Compile Include="Helpers\WebpackHelper.cs" />
     <Compile Include="Models\ContentTypesWithMetadata\Article.cs" />
     <Compile Include="Models\ContentTypesWithMetadata\BlogPost.cs" />
     <Compile Include="Models\ContentTypesWithMetadata\Home.cs" />

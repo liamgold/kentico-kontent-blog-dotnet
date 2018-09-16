@@ -1,4 +1,5 @@
-﻿@model CloudBlog.Models.BlogPost
+﻿@using CloudBlog.Helpers.Extensions
+@model CloudBlog.Models.BlogPost
 @{
     //ViewBag.Title = Model.ContentItem.MetadataMetaTitle;
 }
@@ -7,19 +8,21 @@
     @*   @Html.Partial("HeadersMetadata", Model.ContentItem)*@
 }
 
-<article class="article-detail col-lg-9 col-md-12 article-detail-related-box">
-    <h2>@Html.DisplayFor(vm => vm.Title)</h2>
-    @*<div class="article-detail-datetime">
-        @Html.DateTimeFormattedFor(vm => vm.PostDate, "D")
-    </div>
-    <div class="row">
-        <div class="article-detail-image col-md-push-2 col-md-8">
+<div class="grid-container grid-container--full">
+    <article class="blog-post-article">
+        <h2 class="blog-post-article__title">
+            @Html.DisplayFor(vm => vm.Title)
+        </h2>
+        <div class="blog-post-article__date">
+            @Html.DateTimeFormattedFor(vm => vm.PostDate, "D")
+        </div>
+        <div class="row">
             @Html.AssetImage(Model.TeaserImage.FirstOrDefault(), title: $"Article {Model.System.Name}", cssClass: "img-responsive")
         </div>
-    </div>
-    <div class="row">
-        <div class="article-detail-content">
-            @Html.DisplayFor(vm => vm.BodyCopy)
+        <div class="row">
+            <div class="blog-post-article__content">
+                @Html.DisplayFor(vm => vm.BodyCopy)
+            </div>
         </div>
-    </div>*@
-</article>
+    </article>
+</div>

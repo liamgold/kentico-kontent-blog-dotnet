@@ -1,0 +1,118 @@
+.grid-color-debug {
+  .grid-column,
+  .site-wide,
+  .site-wide--responsive-padding {
+    background-color: rgba(blue, .4);
+  }
+}
+
+/**
+ * Add grid layouts in this partial.
+ *
+ */
+
+// Site-wide is used as a container for the grid or components
+.site-wide {
+	@include rem(max-width, $site-width);
+	margin: 0 auto;
+	padding-left: $site-wide-padding;
+	padding-right: $site-wide-padding;
+	overflow: visible;
+}
+
+.grid-container {
+  @supports not (display: grid) {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    flex-direction: row;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    grid-column-gap: rem(20px);
+  }
+
+  > .grid-column {
+    padding-bottom: rem(30px);
+
+    @supports not (display: grid) {
+      flex: 0 0 100%;
+      flex-direction: column;
+      display: block;
+      box-sizing: border-box;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: rem(15px);
+      padding-right: rem(15px);
+    }
+
+    @supports (display: grid) {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.grid-container--full {
+  @supports (display: grid) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Grid 1:1
+.grid-container--half {
+  @include mq ( tablet ) {
+    @supports (display: grid) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+	> .grid-column {
+    @supports not (display: grid) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+	}
+}
+
+// Grid 1:1:1
+.grid-container--third {
+  @include mq ( tablet ) {
+    @supports (display: grid) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+	> .grid-column {
+    @supports not (display: grid) {
+      flex-basis: 33.33%;
+      max-width: 33.33%;
+    }
+	}
+}
+
+// Grid 1:1:1:1
+.grid-container--quarter {
+  @include mq ( tablet ) {
+    @supports (display: grid) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+	> .grid-column {
+		@supports not (display: grid) {
+      flex-basis: 25%;
+      max-width: 25%;
+    }
+	}
+}

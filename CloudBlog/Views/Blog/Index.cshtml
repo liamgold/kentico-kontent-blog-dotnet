@@ -8,8 +8,9 @@
     @*   @Html.Partial("HeadersMetadata", Model.ContentItem)*@
 }
 
-
-@foreach (var blogPost in Model)
-{
-    @Html.DisplayFor((vm) => blogPost)
-}
+<div class="grid-container grid-container--third">
+    @foreach (var blogPost in Model)
+    {
+        @Html.DisplayFor((vm) => blogPost)
+    }
+</div>

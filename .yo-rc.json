@@ -1,0 +1,12 @@
+{
+  "@netc/generator-netconstruct": {
+    "props": {
+      "appname": "cloud-blog",
+      "destinationRoot": "CloudBlog",
+      "createFolderStructure": true,
+      "msvs": "2017",
+      "es6": true,
+      "installPackages": true
+    }
+  }
+}
