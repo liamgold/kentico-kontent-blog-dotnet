@@ -16,3 +16,9 @@ The project currently requires an external **AppSettings.config** file.  The con
         <add key="ProjectId" value="YOUR_PROJECT_ID" />
     </appSettings>
 ```
+
+Building front end files (initial setup used [generator-netconstruct](https://github.com/netconstruct/generator-netconstruct) yeoman template):
+- open cmd
+- run ```cd CloudBlog/SiteFiles/src/```
+- run ```yarn```
+- run ```gulp build```
