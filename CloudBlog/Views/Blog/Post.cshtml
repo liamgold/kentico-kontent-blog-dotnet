@@ -14,14 +14,14 @@
             @Html.DisplayFor(vm => vm.Title)
         </h2>
         <div class="blog-post-article__date">
-            @Html.DateTimeFormattedFor(vm => vm.PostDate, "D")
+            @Model.PostDate.Value.ToString("D")
         </div>
         <div class="row">
             @Html.AssetImage(Model.TeaserImage.FirstOrDefault(), title: $"Article {Model.System.Name}", cssClass: "img-responsive")
         </div>
         <div class="row">
             <div class="blog-post-article__content">
-                @Html.DisplayFor(vm => vm.BodyCopy)
+                @Html.Raw(Model.BodyCopy)
             </div>
         </div>
     </article>

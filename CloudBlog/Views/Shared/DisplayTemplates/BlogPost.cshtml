@@ -7,7 +7,7 @@
                         .WithMediaCondition(new MediaCondition { MinWidth = 222, MaxWidth = 707, ImageWidth = 468 }))
     </a>
     <div class="blog-post-card__date">
-        @Html.DateTimeFormattedFor(vm => vm.PostDate, "M")
+        @Model.PostDate.Value.ToString("D")
     </div>
     <div class="blog-post-card__content">
         <h2 class="blog-post-card__title">
