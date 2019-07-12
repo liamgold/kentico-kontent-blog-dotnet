@@ -8,6 +8,7 @@ namespace CloudBlog
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.AppendTrailingSlash = true;
 
             routes.MapRoute(
                 name: "BlogTags",

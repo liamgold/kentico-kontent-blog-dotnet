@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Web.Mvc;
+using CloudBlog.Infrastructure;
 using CloudBlog.Models;
 using KenticoCloud.Delivery;
 
@@ -8,7 +9,7 @@ namespace CloudBlog.Controllers
 {
     public class ControllerBase : AsyncController
     {
-        protected static readonly DeliveryClient baseClient = CreateDeliveryClient();
+        protected static readonly IDeliveryClient baseClient = CreateDeliveryClient();
         public readonly IDeliveryClient client;
 
         public ControllerBase()
@@ -16,7 +17,7 @@ namespace CloudBlog.Controllers
             client = baseClient;
         }
        
-        public static DeliveryClient CreateDeliveryClient()
+        public static IDeliveryClient CreateDeliveryClient()
         {
             // Use the provider to get environment variables.
             var provider = new ConfigurationManagerProvider();
@@ -26,9 +27,10 @@ namespace CloudBlog.Controllers
             Guid.TryParse(ConfigurationManager.AppSettings["ProjectId"], out Guid projectId);
             options.ProjectId = projectId.ToString();
 
-            var clientInstance = new DeliveryClient(options);
-            clientInstance.CodeFirstModelProvider.TypeProvider = new CustomTypeProvider();
-            clientInstance.ContentLinkUrlResolver = new CustomContentLinkUrlResolver();
+            var clientInstance = DeliveryClientBuilder.WithOptions(o => options)
+                .WithTypeProvider(new CustomTypeProvider())
+                .WithContentLinkUrlResolver(new CustomContentLinkUrlResolver()).Build();
+
             return clientInstance;
         }
     }

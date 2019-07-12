@@ -1,23 +1,27 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using KenticoCloud.Delivery;
 
 namespace CloudBlog.Models
 {
-    public class CustomTypeProvider : ICodeFirstTypeProvider
+    public class CustomTypeProvider : ITypeProvider
     {
+        private static readonly Dictionary<Type, string> _codenames = new Dictionary<Type, string>
+        {
+            {typeof(Article), "article"},
+            {typeof(BlogPost), "blog_post"},
+            {typeof(Home), "home"},
+        };
+
         public Type GetType(string contentType)
         {
-            switch (contentType)
-            {
-                case "article":
-                    return typeof(Article);
-                case "blog_post":
-                    return typeof(BlogPost);
-                case "home":
-                    return typeof(Home);
-                default:
-                    return null;
-            }
+            return _codenames.Keys.FirstOrDefault(type => GetCodename(type).Equals(contentType));
+        }
+
+        public string GetCodename(Type contentType)
+        {
+            return _codenames.TryGetValue(contentType, out var codename) ? codename : null;
         }
     }
 }
