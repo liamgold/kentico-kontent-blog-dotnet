@@ -1,4 +1,4 @@
-﻿@using CloudBlog.Helpers
+﻿@using CloudBlog.Core.Webpack
 
 <!DOCTYPE html>
 <html>
@@ -35,30 +35,18 @@
     @RenderSection("Scripts", false)
 
     <script defer src="@WebpackHelper.GetAssetUrl("polyfill.js")"></script>
-    <script defer src="@WebpackHelper.GetAssetUrl("vendor.js")"></script>
     <script defer src="@WebpackHelper.GetAssetUrl("main.js")"></script>
 
     @RenderSection("headers", required: false)
 </head>
 <body>
     <div class="site-wide">
-        <header class="header">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "" })
-            <nav class="nav">
-                <ul>
-                    <li>@Html.ActionLink("Home", "Index", "home")</li>
-                    <li>@Html.ActionLink("Blog", "Index", "blog")</li>
-                </ul>
-            </nav>
-        </header>
-        <main class="main">
+        @Html.Partial("MasterHeader")
+        <main class="main-content">
             @RenderBody()
         </main>
-        <footer class="footer">
-            <p>&copy; @DateTime.Now.Year - Blog Sample</p>
-        </footer>
+        @Html.Partial("MasterFooter")
     </div>
-
     @RenderSection("scripts", required: false)
 </body>
 </html>

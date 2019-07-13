@@ -1,10 +1,11 @@
-﻿using KenticoCloud.Delivery;
+﻿using CloudBlog.Core.ResponsiveImages;
+using KenticoCloud.Delivery;
 using KenticoCloud.Delivery.ImageTransformation;
 using System;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace CloudBlog.Helpers.Extensions
+namespace CloudBlog.Extensions
 {
     public static class HtmlHelperExtensions
     {

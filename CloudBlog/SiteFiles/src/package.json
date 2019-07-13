@@ -7,6 +7,8 @@
     "build": "webpack --mode production --config tasks/webpack.prd.config.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "fg-loadcss": "^2.0.1",
     "fontfaceobserver": "^2.0.13",
     "picturefill": "^3.0.2",

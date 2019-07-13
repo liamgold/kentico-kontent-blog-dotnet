@@ -8,8 +8,6 @@
     @Html.Partial("HeadersMetadata", Model.ContentItem)
 }
 
-<div class="row">
-    <h1 class="title-tab">
-        @Html.DisplayFor(vm => vm.ContentItem.MetadataMetaTitle)
-    </h1>
-</div>
+<h1 class="title-tab">
+    @Model.ContentItem.MetadataMetaTitle
+</h1>

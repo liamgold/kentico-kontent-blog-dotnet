@@ -1,2 +1,2 @@
-import './example';
+import './init-fontawesome';
 import './init-webfonts';

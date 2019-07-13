@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CloudBlog.Helpers.Extensions
+namespace CloudBlog.Core.ResponsiveImages
 {
     public class ResponsiveImageSizes
     {

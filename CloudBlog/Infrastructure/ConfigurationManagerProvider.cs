@@ -1,6 +1,7 @@
 ﻿using KenticoCloud.Delivery;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
+using ConfigurationBuilder = Microsoft.Extensions.Configuration.ConfigurationBuilder;
 
 namespace CloudBlog.Infrastructure
 {
