@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "gulp default",
-    "build": "gulp build"
+    "start": "webpack --watch --mode development --config tasks/webpack.hmr.config.js",
+    "build": "webpack --mode production --config tasks/webpack.prd.config.js"
   },
   "dependencies": {
     "fg-loadcss": "^2.0.1",
@@ -15,8 +15,6 @@
     "when-dom-ready": "^1.2.12"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.1.7",
-    "@frctl/mandelbrot": "^1.2.0",
     "autoprefixer": "^9.1.5",
     "babel-core": "6",
     "babel-eslint": "^9.0.0",
@@ -26,6 +24,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
@@ -44,10 +43,6 @@
     "expose-loader": "^0.7.5",
     "extract-loader": "^3.0.0",
     "file-loader": "^2.0.0",
-    "gulp": "^3.9.1",
-    "gulp-modernizr": "^3.0.0",
-    "gulp-svg-sprite": "^1.4.0",
-    "gulp-util": "^3.0.8",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.3.1",
@@ -67,10 +62,14 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.1.0",
     "webpack-assets-manifest": "^3.0.2",
+    "webpack-cli": "^3.3.5",
     "webpack-dev-middleware": "^3.0.0",
     "webpack-hot-middleware": "^2.24.0",
     "webpack-merge": "^4.1.4",
     "webpack-stats-plugin": "^0.2.1",
     "workbox-webpack-plugin": "^3.5.0"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
