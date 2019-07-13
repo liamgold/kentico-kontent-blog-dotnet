@@ -1,8 +1,3 @@
-// todo: remove after https://github.com/webpack-contrib/mini-css-extract-plugin/issues/34 resolved
-if (process.env.NODE_ENV !== 'production') {
-  import('../sass/main.scss');
-}
-
 // Load service worker in production build only.
 if (process.env.NODE_ENV === 'production') {
   if ('serviceWorker' in navigator) {
