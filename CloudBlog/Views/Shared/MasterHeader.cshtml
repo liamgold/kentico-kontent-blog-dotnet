@@ -1,0 +1,12 @@
+﻿<header class="header">
+    <a href="@Url.Action("Index", "Home")" class="header__logo">
+        <i class="fas fa-blog fa-5x"></i>
+    </a>
+
+    <nav class="main-nav">
+        <ul class="main-nav__list">
+            <li class="main-nav__item">@Html.ActionLink("Home", "Index", "home")</li>
+            <li class="main-nav__item">@Html.ActionLink("Blog", "Index", "blog")</li>
+        </ul>
+    </nav>
+</header>

@@ -24,12 +24,15 @@ body {
   margin: 0;
 }
 
-p {
+p, a {
+  color: $brand-text;
 }
 
 // @note: override margin-top from Titon and add a margin-bottom
-ul, ol, p {
-	@include rem(margin, 0 0 16px 0);
+ul,
+ol,
+p {
+  @include rem(margin, 0 0 16px 0);
 }
 
 /**
@@ -40,8 +43,12 @@ ul, ol, p {
  *    using `display: block;`.
  */
 
- img {
+img {
   max-width: 100%; /* [1] */
   font-style: italic; /* [2] */
   vertical-align: middle; /* [3] */
+}
+
+.main-content {
+  min-height: 500px;
 }

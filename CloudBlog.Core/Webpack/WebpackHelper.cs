@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Web.Hosting;
 
-namespace CloudBlog.Helpers
+namespace CloudBlog.Core.Webpack
 {
     public static class WebpackHelper
     {

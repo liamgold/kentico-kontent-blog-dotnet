@@ -7,3 +7,10 @@
 // base
 @import 'base/base-fonts';
 @import 'base/base-grid';
+
+// settings
+@import 'settings/settings-brand';
+
+// components - alphabetical order please 😀
+@import 'components/component-header';
+@import 'components/component-navigation';

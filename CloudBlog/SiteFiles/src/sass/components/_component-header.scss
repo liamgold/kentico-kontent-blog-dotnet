@@ -1,3 +1,11 @@
-/**
- * Add component specific styles in this file.
- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0 50px 0;
+
+  &__logo {
+    flex: 1 1 auto;
+    min-width: 500px;
+    color: $brand-primary;
+  }
+}

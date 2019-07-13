@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBlog", "CloudBlog\CloudBlog.csproj", "{52E1A07B-3A85-4E6A-A475-FFFB8FD10A26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBlog.Core", "CloudBlog.Core\CloudBlog.Core.csproj", "{3ADC3ECE-C195-44E7-8BDA-2EA9868B41F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{52E1A07B-3A85-4E6A-A475-FFFB8FD10A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52E1A07B-3A85-4E6A-A475-FFFB8FD10A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52E1A07B-3A85-4E6A-A475-FFFB8FD10A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADC3ECE-C195-44E7-8BDA-2EA9868B41F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADC3ECE-C195-44E7-8BDA-2EA9868B41F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADC3ECE-C195-44E7-8BDA-2EA9868B41F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADC3ECE-C195-44E7-8BDA-2EA9868B41F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
