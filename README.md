@@ -21,4 +21,4 @@ Building front end files (initial setup used [generator-netconstruct](https://gi
 - open cmd
 - run ```cd CloudBlog/SiteFiles/src/```
 - run ```yarn```
-- run ```gulp build```
+- run ```yarn build```

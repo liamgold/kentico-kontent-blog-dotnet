@@ -5,9 +5,7 @@ const ie11 = require('postcss-ie11-supports');
 
 module.exports = {
   plugins: [
-    autoprefixer({
-      browsers: ['ie 11', 'last 2 versions'],
-    }),
+    autoprefixer(),
     pseudoelements(),
     normalize({ forceImport: false }),
     ie11(),
