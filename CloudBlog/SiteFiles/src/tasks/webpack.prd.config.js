@@ -7,7 +7,6 @@ const webpack = require('webpack');
 
 // webpack plugins
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin;
 const { InjectManifest } = require('workbox-webpack-plugin');

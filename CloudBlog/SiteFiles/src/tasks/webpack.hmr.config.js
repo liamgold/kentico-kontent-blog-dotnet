@@ -6,8 +6,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 // webpack plugins
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin;
 const WebpackAssetsManifest = require('webpack-assets-manifest');
 
@@ -20,12 +21,7 @@ const paths = require('../core/paths');
 module.exports = merge.smart(baseConfig, {
   entry: {
     critical: ['sass/critical.scss'],
-    main: [
-      'webpack/hot/dev-server',
-      'webpack-hot-middleware/client?reload=true',
-      'sass/main.scss',
-      'js/main',
-    ],
+    main: ['sass/main.scss', 'js/main'],
     offline: ['sass/offline.scss'],
     polyfill: [
       'babel-polyfill',
@@ -40,13 +36,7 @@ module.exports = merge.smart(baseConfig, {
       {
         test: /\.(css|scss)$/,
         use: [
-          // todo: swap to MiniCssExtractPlugin.loader after https://github.com/webpack-contrib/mini-css-extract-plugin/issues/34 resolved
-          {
-            loader: 'style-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -103,10 +93,9 @@ module.exports = merge.smart(baseConfig, {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
-    // todo: add after https://github.com/webpack-contrib/mini-css-extract-plugin/issues/34 resolved
-    // new MiniCssExtractPlugin({
-    //   filename: '[name].css',
-    // }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
     new StatsWriterPlugin({
       transform(data, opts) {
         const stats = opts.compiler.getStats().toJson({ chunkModules: true });
@@ -114,5 +103,10 @@ module.exports = merge.smart(baseConfig, {
       },
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new BrowserSyncPlugin({
+        host: 'localhost',
+        port: 3000,
+        proxy: 'http://localhost/'
+    })
   ],
 });
