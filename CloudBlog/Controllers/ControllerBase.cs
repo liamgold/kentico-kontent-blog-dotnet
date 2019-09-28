@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Web.Mvc;
 using CloudBlog.Infrastructure;
 using CloudBlog.Models;
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 namespace CloudBlog.Controllers
 {

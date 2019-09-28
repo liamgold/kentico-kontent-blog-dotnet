@@ -1,5 +1,5 @@
 ﻿using CloudBlog.Models;
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 using System.Globalization;
 
 namespace CloudBlog

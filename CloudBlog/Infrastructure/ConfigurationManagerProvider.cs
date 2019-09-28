@@ -1,4 +1,4 @@
-﻿using KenticoCloud.Delivery;
+﻿using Kentico.Kontent.Delivery;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
 using ConfigurationBuilder = Microsoft.Extensions.Configuration.ConfigurationBuilder;

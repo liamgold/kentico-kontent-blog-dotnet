@@ -1,6 +1,6 @@
 ﻿using CloudBlog.Core.ResponsiveImages;
-using KenticoCloud.Delivery;
-using KenticoCloud.Delivery.ImageTransformation;
+using Kentico.Kontent.Delivery;
+using Kentico.Kontent.Delivery.ImageTransformation;
 using System;
 using System.Linq;
 using System.Web.Mvc;
