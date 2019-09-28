@@ -1,0 +1,21 @@
+﻿@using KontentBlog.Extensions
+@using KontentBlog.Core.ResponsiveImages
+@model KontentBlog.Models.BlogPost
+
+<div class="blog-post-card">
+    <a href="@Url.Action("Post", "Blog", new { urlSlug = Model.UrlPattern })">
+        @Html.AssetImage(Model.TeaserImage.FirstOrDefault(), title: $"Article {Model.Title}", cssClass: "article-tile-image", sizes: new ResponsiveImageSizes(550)
+                        .WithMediaCondition(new MediaCondition { MinWidth = 222, MaxWidth = 707, ImageWidth = 468 }))
+    </a>
+    <div class="blog-post-card__date">
+        @Model.PostDate.Value.ToString("D")
+    </div>
+    <div class="blog-post-card__content">
+        <h2 class="blog-post-card__title">
+            <a href="@Url.Action("Post", "Blog", new { urlSlug = Model.UrlPattern })">@Model.Title</a>
+        </h2>
+        <p class="blog-post-card__summary">
+            @Html.DisplayFor(vm => vm.Summary)
+        </p>
+    </div>
+</div>

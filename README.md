@@ -19,6 +19,6 @@ The project currently requires an external **AppSettings.config** file.  The con
 
 Building front end files (initial setup used [generator-netconstruct](https://github.com/netconstruct/generator-netconstruct) yeoman template):
 - open cmd
-- run ```cd CloudBlog/SiteFiles/src/```
+- run ```cd KontentBlog/SiteFiles/src/```
 - run ```yarn```
 - run ```yarn build```
