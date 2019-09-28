@@ -1,0 +1,13 @@
+﻿@model KontentBlog.Models.HomeViewModel
+
+@{
+    ViewBag.Title = Model.ContentItem.MetadataMetaTitle;
+}
+@section headers
+{
+    @Html.Partial("HeadersMetadata", Model.ContentItem)
+}
+
+<h1 class="title-tab">
+    @Model.ContentItem.MetadataMetaTitle
+</h1>

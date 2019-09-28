@@ -1,0 +1,16 @@
+﻿@model IEnumerable<KontentBlog.Models.BlogPost>
+
+@{
+    //ViewBag.Title = Model.ContentItem.MetadataMetaTitle;
+}
+@section headers
+{
+    @*   @Html.Partial("HeadersMetadata", Model.ContentItem)*@
+}
+
+<div class="grid-container grid-container--third">
+    @foreach (var blogPost in Model)
+    {
+        @Html.DisplayFor((vm) => blogPost)
+    }
+</div>
