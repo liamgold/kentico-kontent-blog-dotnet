@@ -1,5 +1,7 @@
 # Blog website using Kentico Kontent
 
+**Project has now been marked as archived.**
+
 This is a basic implementation of a blog website written in C# .NET MVC using Kentico Kontent as the headless CMS.
 
 The main purpose for this project is to provide a base for building other personal Kentico Kontent websites in future.
